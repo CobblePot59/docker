@@ -1,0 +1,1312 @@
+#!/bin/bash
+
+# Author: Mageni Security, LLC
+# The author disclaims copyright to this source code. "Freely you have received; freely give." - Sumanai Abbi Moshia Yeshua Hoshia Yoshia
+
+function script_integrity()
+{
+cat <<-EOF
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+Mlh+9O0qV4p9IYxvL5Qwr2ztGsImDDQ=
+=UgCZ
+-----END PGP PUBLIC KEY BLOCK-----
+EOF
+}
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+reset=`tput sgr0`
+bold=`tput bold`
+magenta=`tput setaf 5`
+clearscreen=`tput clear`
+
+product="Mageni Security Platform"
+sales="sales@mageni.net"
+website="https://www.mageni.net"
+webhome="https://www.mageni.net/home"
+webapi="https://www.mageni.net/license?api_token"
+
+keypgp=$(curl -s https://dl.mageni.net/install/B33E72AC)
+
+dirhome="/etc/mageni"
+dirdebi="$dirhome/deb"
+logfile="$dirhome/mageni-install.log"
+softlog="$dirhome/mageni-software-update.log"
+feedlog="$dirhome/mageni-feed-update.log"
+licfile="$dirhome/license.key"
+
+defaultuser="admin"
+cronduser="mageni"
+defaultrole="Admin"
+defaultpass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 ; echo '')
+
+APTUPDATERUN=0
+
+declare -a ubuntudependencies=(
+                         'nmap'
+                         'bc'
+                         'libgnutls28-dev'
+                         'libglib2.0-dev'
+                         'p7zip-full'
+                         'libpcap-dev'
+                         'libgpgme-dev'
+                         'bison'
+                         'rsync'
+                         'libksba-dev'
+                         'libsnmp-dev'
+                         'libgcrypt20-dev'
+                         'libgpgme11-dev'
+                         'uuid-dev'
+                         'libssh-dev'
+                         'libssh-gcrypt-dev'
+                         'libhiredis-dev'
+                         'libpopt-dev'
+                         'libsqlite3-dev'
+                         'sqlite3'
+                         'libical-dev'
+                         'libical3'
+                         'xsltproc'
+                         'xmlstarlet'
+                         'zip'
+                         'gnupg'
+                         'wget'
+                         'sshpass'
+                         'socat'
+                         'libmicrohttpd-dev'
+                         'libxml2-dev'
+                         'libxslt1-dev'
+                         'libldap2-dev'
+                         'python3'
+                         'smbclient'
+                         'python3-lxml'
+                         'heimdal-dev'
+                         'gnutls-bin'
+                         'heimdal-multidev'
+                         'redis-server'
+                         'python-impacket'
+                         )
+
+declare -a kalidependencies=(
+                         'nmap'
+                         'bc'
+                         'libgnutls28-dev'
+                         'libglib2.0-dev'
+                         'p7zip-full'
+                         'libpcap-dev'
+                         'libgpgme-dev'
+                         'bison'
+                         'rsync'
+                         'libksba-dev'
+                         'libsnmp-dev'
+                         'libgcrypt20-dev'
+                         'libgpgme11-dev'
+                         'uuid-dev'
+                         'libssh-gcrypt-dev'
+                         'libhiredis-dev'
+                         'libpopt-dev'
+                         'libsqlite3-dev'
+                         'sqlite3'
+                         'libical-dev'
+                         'libical3'
+                         'xsltproc'
+                         'xmlstarlet'
+                         'zip'
+                         'gnupg'
+                         'wget'
+                         'sshpass'
+                         'libssh-dev'
+                         'socat'
+                         'libmicrohttpd-dev'
+                         'libxml2-dev'
+                         'libxslt1-dev'
+                         'libldap2-dev'
+                         'python3'
+                         'smbclient'
+                         'python3-lxml'
+                         'heimdal-dev'
+                         'gnutls-bin'
+                         'heimdal-multidev'
+                         'redis-server'
+                         'python3-impacket'
+                         )
+
+declare -a debiandependencies=(
+                         'nmap'
+                         'bc'
+                         'libgnutls28-dev'
+                         'libglib2.0-dev'
+                         'p7zip-full'
+                         'libpcap-dev'
+                         'libgpgme-dev'
+                         'bison'
+                         'rsync'
+                         'libksba-dev'
+                         'libsnmp-dev'
+                         'libgcrypt20-dev'
+                         'libssh-dev'
+                         'libgpgme11'
+                         'uuid-dev'
+                         'libssh-gcrypt-dev'
+                         'libhiredis-dev'
+                         'libpopt-dev'
+                         'libsqlite3-dev'
+                         'sqlite3'
+                         'libical-dev'
+                         'libical3'
+                         'xsltproc'
+                         'xmlstarlet'
+                         'zip'
+                         'gnupg'
+                         'wget'
+                         'sshpass'
+                         'socat'
+                         'libmicrohttpd-dev'
+                         'libxml2-dev'
+                         'libxslt1-dev'
+                         'libldap2-dev'
+                         'python3'
+                         'smbclient'
+                         'python3-lxml'
+                         'heimdal-dev'
+                         'gnutls-bin'
+                         'heimdal-multidev'
+                         'redis-server'
+                         'python-impacket'
+                         )
+
+function msg_bold()
+{
+  echo -e "${bold}$1 ${reset}"
+}
+
+function msg_normal()
+{
+  echo -e "$1"
+}
+
+function msg_warn()
+{
+  echo -e "${bold}${yellow}[WARNING]:${reset} $1"
+  echo -e "`date +%m-%d-%Y-%M:%S` [WARNING]: $1" >> $logfile
+  # sleep 1
+}
+
+function msg_welcome()
+{
+  echo -e     "${clearscreen}"
+  msg_bold    "Mageni Security LLC"
+  msg_normal  "$website"
+  msg_normal  "Mageni Security Platform\n"
+  msg_bold    "Welcome $SUDO_USER:\n"
+  msg_normal  "Thanks for downloading $product version $verms"
+  echo -e     "${reset}"
+}
+
+function msg_success()
+{
+  echo -e "${bold}${green}[SUCCESS]:${reset} $1 ${bold}\u2714${reset}"
+  echo -e "`date +%m-%d-%Y-%M:%S` [SUCCESS]: $1 \u2714" >> $logfile
+  # sleep 1
+}
+
+function msg_success_log_scrub()
+{
+  echo -e "${bold}${green}[SUCCESS]:${reset} $1 ${bold}\u2714${reset}"
+  echo -e "`date +%m-%d-%Y-%M:%S` [SUCCESS]: User ***** and password ***** created successfully. \u2714" >> $logfile
+  # sleep 1
+}
+
+
+function msg_success_nolog()
+{
+  echo -e "${bold}${green}[SUCCESS]:${reset} $1 ${bold}\u2714${reset}"
+  # sleep 1
+}
+
+function msg_success_interrupt()
+{
+  echo -e "${bold}${green}[SUCCESS]:${reset} $1 ${bold}\u2714${reset}"
+  # sleep 1
+  exit 1
+}
+
+function msg_err_interrupt()
+{
+  echo -e "${bold}${red}[FAILURE]:${reset} $1"
+  exit 1
+}
+
+function msg_step()
+{
+  echo -e "${bold}${blue}[MESSAGE]:${reset} ${bold}$1${reset}"
+  echo -e "`date +%m-%d-%Y-%M:%S` [MESSAGE]: $1" >> $logfile
+  # sleep 1
+}
+
+function msg_step_nolog()
+{
+  echo -e "${bold}${blue}[MESSAGE]:${reset} $1"
+  # sleep 1
+}
+
+function msg_correct()
+{
+  echo -e "${bold}${magenta}[CORRECT]:${reset} $1"
+  echo -e "`date +%m-%d-%Y-%M:%S` [MESSAGE]: $1" >> $logfile
+  # sleep 1
+}
+
+function msg_prompt()
+{
+  echo -ne "${bold}${blue}[LICENSE]:${reset} ${bold}$1${reset}"
+  echo -ne "`date +%m-%d-%Y-%M:%S` [LICENSE]: $1" >> $logfile
+  # sleep 1
+}
+
+function msg_prompt_interrupt()
+{
+  echo -ne "${bold}${blue}[PROMPT]:${reset} $1"
+  echo -ne "`date +%m-%d-%Y-%M:%S` [LICENSE]: $1" >> $logfile
+  # sleep 1
+}
+
+
+function msg_err()
+{
+  echo -e "${bold}${red}[FAILURE]:${reset} $1"
+  echo -e "`date +%m-%d-%Y-%M:%S` [FAILURE]: $1" >> $logfile
+  clean_interrupt_install
+  exit 1
+}
+
+function msg_err_nolog()
+{
+  echo -e "${bold}${red}[FAILURE]:${reset} $1"
+  clean_interrupt_install
+  exit 1
+}
+
+function msg_err_incompatible()
+{
+  echo -e "${bold}${red}[FAILURE]:${reset} $1"
+  echo -e "`date +%m-%d-%Y-%M:%S` [FAILURE]: $1" >> $logfile
+}
+
+function agreement()
+{
+  echo -e "> To complete the installation you will need a registration token. Get one free at: https://www.mageni.net/register"
+  echo -e "> The source code is available at: https://opensource.mageni.net/"
+  echo -e "> If you need support, buy a support subscription: https://www.mageni.net/register or contact us at: $sales"
+  echo -e ""
+}
+
+function trap_signals()
+{
+  if grep -q -s DISTRIB_ID=Ubuntu /etc/lsb-release; then
+    trap '' SIGUSR2 SIGHUP SIGTSTP SIGQUIT SIGUSR1 SIGTERM
+  else
+    trap '' SIGUSR2 SIGHUP SIGTSTP SIGQUIT SIGUSR1 SIGTERM
+  fi
+}
+
+function check_perms()
+{
+  if ! [ "$(id -u)" = 0 ]; then
+    msg_err_nolog "This installation requires sudo."
+    exit 1
+  fi
+}
+
+function discover_hostname()
+{
+  msg_step "Finding the hostname"
+  if [ "${HOSTNAME:-null}" != null ]; then
+    msg_success "Hostname: $HOSTNAME IPv4: $IPAddress"
+  fi
+}
+
+function discover_os()
+{
+  msg_step "Discovering the OS"
+  if command -v lsb_release >/dev/null; then
+    distro=$(lsb_release -is | tr '[:upper:]' '[:lower:]')
+    if [ $distro == "ubuntu" ] || [ $distro == "kali" ] || [ $distro == "debian" ]; then
+      msg_success "Operating System: $distro Supported"
+    fi
+  else
+    msg_err "Operating System Unsupported. Supported OS are Ubuntu and Kali."
+    exit 1
+  fi
+
+  msg_step "Check if processor architecture is supported"
+  ARCH=$(uname -m)
+  if [ "$(uname -m)" != "x86_64" ]; then
+    msg_err "Installer must be run on a 64 bit version of Ubuntu Linux"
+    exit 1
+  else
+    msg_success "Processor architecture $ARCH is supported"
+  fi
+
+  msg_step "Check if this version of $distro is supported"
+  if [ $distro == "ubuntu" ]; then
+    disver=$(lsb_release -rs)
+    if [ $disver == "18.04" ] || [ $disver == "19.10" ]; then
+      msg_success "`lsb_release -ds` is supported"
+    else
+      msg_err "`lsb_release -ds` is not supported. Supported versions are 18.04, 19.10, 20.04"
+      exit 1
+    fi
+  elif [ $distro == "kali" ]; then
+    disver=$(lsb_release -rs)
+    if [ "$(lsb_release -rs)" == "2020.2" ]; then
+      msg_success "`lsb_release -ds` is supported"
+    else
+      msg_err "`lsb_release -ds` is not supported. Supported version is 2020.2"
+      exit 1
+    fi
+  elif [ $distro == "debian" ]; then
+    disver=$(lsb_release -rs)
+    if [ "$(lsb_release -rs)" == "10" ]; then
+      msg_success "`lsb_release -ds` is supported"
+    else
+      msg_err "`lsb_release -ds` is not supported. Supported version is 2020.2"
+      exit 1
+    fi
+  fi
+
+  verms=$(curl -s https://dl.mageni.net/install/verms)
+  debsmburl="https://dl.mageni.net/${distro}/${disver}/mageni-libsmb_${verms}-1_amd64.deb"
+  debliburl="https://dl.mageni.net/${distro}/${disver}/mageni-library_${verms}-1_amd64.deb"
+  debscnurl="https://dl.mageni.net/${distro}/${disver}/mageni-vscand_${verms}-1_amd64.deb"
+  debsqlurl="https://dl.mageni.net/${distro}/${disver}/mageni-sqlite_${verms}-1_amd64.deb"
+  debweburl="https://dl.mageni.net/${distro}/${disver}/mageni-websvr_${verms}-1_amd64.deb"
+  debsmbout="mageni-libsmb_${verms}-1_amd64.deb"
+  deblibout="mageni-library_${verms}-1_amd64.deb"
+  debscnout="mageni-vscand_${verms}-1_amd64.deb"
+  debsqlout="mageni-sqlite_${verms}-1_amd64.deb"
+  debwebout="mageni-websvr_${verms}-1_amd64.deb"
+}
+
+function install_curl()
+{
+  if ! which curl > /dev/null 2>&1 ; then
+  msg_step "Running apt-update"
+  DEBIAN_FRONTEND=noninteractive apt update -yq >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      msg_success "apt-update was successful"
+      APTUPDATERUN=1
+      msg_step "Installing curl"
+      DEBIAN_FRONTEND=noninteractive apt install curl -yq --no-install-recommends >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "curl installation was successful"
+      else
+        msg_err "Error while installing curl. Please fix this."
+        exit 1
+      fi
+    fi
+  fi
+}
+
+function essential_software()
+{
+  msg_step "Running apt-update"
+  DEBIAN_FRONTEND=noninteractive apt update -yq >/dev/null 2>/dev/null
+  if [ $? -eq 0 ]; then
+    msg_success "apt-update was successful"
+    APTUPDATERUN=1
+
+    if ! which whiptail > /dev/null 2>&1 ; then
+      msg_step "Installing whiptail"
+      DEBIAN_FRONTEND=noninteractive apt install whiptail -yq --no-install-recommends >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "whiptail installation was successful"
+      else
+        msg_err "Error while installing whiptail. Please fix this."
+        exit 1
+      fi
+    fi
+
+    if ! which nc > /dev/null 2>&1 ; then
+      msg_step "Installing netcat"
+      DEBIAN_FRONTEND=noninteractive apt install netcat -yq --no-install-recommends >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "netcat installation was successful"
+      else
+        msg_err "Error while installing netcat. Please fix this."
+        exit 1
+      fi
+    fi
+
+  else
+    msg_err "Running apt-update failed. Please fix this."
+    exit 1
+  fi
+}
+
+function start_log_file()
+{
+  if [ -f $logfile ]; then
+    rm $logfile
+  else
+    touch $logfile
+    if [ $? -ne 0 ]; then
+        msg_err "Error while creating $logfile"
+    fi
+
+    touch $feedlog
+    if [ $? -ne 0 ]; then
+        msg_err "Error while creating $feedlog"
+    fi
+
+    touch $softlog
+    if [ $? -ne 0 ]; then
+        msg_err "Error while creating $softlog"
+    fi
+  fi
+}
+
+function selinux_check()
+{
+  msg_step "SELinux Check"
+  if ! which getenforce > /dev/null 2>&1 ; then
+    msg_success "Check for SELinux passed"
+  else
+  SELINUXMODE=$(getenforce)
+    if [[ "$SELINUXMODE" != "Disabled" || "$SELINUXMODE" != "Permissive" ]]; then
+      msg_err "SELinux is set to ${bold}$SELINUXMODE${reset}. Please correct this."
+      msg_correct "SELinux $SELINUXMODE mode requires customization. As a workaround use SELinux in Permissive or Disabled mode."
+      clean_interrupt_install
+      exit 1
+    fi
+  fi
+}
+
+function disk_check()
+{
+  msg_step "Disk Check"
+  FREE=`df -k --output=avail "$PWD" | tail -n1`
+  if [[ $FREE -lt 4194304 ]]; then
+    msg_err "Low disk space available. Please increase the capacity of the disk."
+  else
+    msg_success "Disk space avalaible"
+  fi
+}
+
+function bootstrap_dir_home()
+{
+  if ! [ -d $dirhome ]; then
+    mkdir $dirhome
+    sleep 1
+  fi
+}
+
+function test_internet()
+{
+  msg_step "Checking Internet connectivity"
+  website=mageni.net
+  if
+    nc -zw1 $website 443 && echo |openssl s_client -connect $website:443 2>&1 | awk '
+    handshake && $1 == "Verification" { if ($2=="OK") exit; exit 1 }
+    $1 $2 == "SSLhandshake" { handshake = 1 }'
+  then
+    msg_success "Connectivity with $website is working"
+  else
+    msg_err "Please fix your connectivity with $website"
+    exit 1
+  fi
+}
+
+function get_ip()
+{
+  IPAddress=$(hostname -I | awk '{print $1}')
+}
+
+function check_port_https()
+{
+  msg_step "Check if port 443 TCP is available"
+  if ! which ss > /dev/null 2>&1 ; then
+    if netstat -tulpn | grep ':443' | grep LISTEN  > /dev/null 2>&1; then
+      msg_err "Port 443 TCP is being used by another application. Please fix this."
+      exit 1
+    else
+      msg_success "Port 443 TCP is available"
+    fi
+  else
+    if ss -lnt "( sport = :443 )" | grep -q LISTEN; then
+      msg_correct "Port 443 TCP is being used by another application. Please fix this."
+      msg_err "Mageni Security Platform requires port 443 TCP to serve the web application."
+      exit 1
+    else
+      msg_success "Port 443 TCP is available"
+    fi
+  fi
+}
+
+function check_port_manager()
+{
+  msg_step "Check if port 9390 TCP is available"
+  if ! which ss > /dev/null 2>&1 ; then
+    if netstat -tulpn | grep ':9390' | grep LISTEN  > /dev/null 2>&1; then
+      msg_err "Port 9390 TCP is being used by another application. Please fix this."
+      exit 1
+    else
+      msg_success "Port 9390 TCP is available"
+    fi
+  else
+    if ss -lnt "( sport = :9390 )" | grep -q LISTEN; then
+      msg_correct "Port 9390 TCP is being used by another application. Please fix this."
+      msg_err "Mageni Security Platform requires port 9390 TCP available"
+      exit 1
+    else
+      msg_success "Port 9390 TCP is available"
+    fi
+  fi
+}
+
+function apt_install_dependencies()
+{
+  if [ $APTUPDATERUN -eq 0 ]; then
+  msg_step  "Running apt-update"
+  DEBIAN_FRONTEND=noninteractive apt update -yq >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      msg_success "apt-update success"
+    else
+      msg_err "apt-update error"
+    fi
+  fi
+
+  if [ $distro == "ubuntu" ]; then
+  msg_step "Installing ${#ubuntudependencies[@]} dependencies"
+  for package in "${!ubuntudependencies[@]}"
+  do
+    msg_step "Installing Dependency $((package+1)) of ${#ubuntudependencies[@]}:"
+    msg_step "Checking if ${ubuntudependencies[package]} is installed"
+    dpkg -s ${ubuntudependencies[package]} >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      msg_success "${ubuntudependencies[package]} was previously installed"
+    else
+    msg_warn "${ubuntudependencies[package]} is not installed. Installing it."
+    DEBIAN_FRONTEND=noninteractive apt install ${ubuntudependencies[package]} -yq --no-install-recommends >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      msg_success "${ubuntudependencies[package]} was successfully installed"
+    else
+      msg_err "Error installing ${ubuntudependencies[package]}. Please contact support@mageni.net and send us the $logfile"
+      exit 1
+    fi
+    fi
+  done
+  msg_success "${#ubuntudependencies[@]} dependencies installed successfully."
+
+  elif [ $distro == "kali" ]; then
+  msg_step "Installing ${#kalidependencies[@]} dependencies"
+  for package in "${!kalidependencies[@]}"
+  do
+    msg_step "Installing Dependency $((package+1)) of ${#kalidependencies[@]}:"
+    msg_step "Checking if ${kalidependencies[package]} is installed"
+    dpkg -s ${kalidependencies[package]} >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      msg_success "${kalidependencies[package]} was previously installed"
+    else
+      msg_warn "${kalidependencies[package]} is not installed. Installing it."
+      DEBIAN_FRONTEND=noninteractive apt install ${kalidependencies[package]} -yq --no-install-recommends >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "${kalidependencies[package]} was successfully installed"
+      else
+        msg_err "Error installing ${kalidependencies[package]}. Please contact support@mageni.net and send us the $logfile"
+        exit 1
+      fi
+    fi
+  done
+  msg_success "${#kalidependencies[@]} dependencies installed successfully."
+
+  elif [ $distro == "debian" ]; then
+  for package in "${!debiandependencies[@]}"
+  do
+      msg_step "Installing Dependency $((package+1)) of ${#debiandependencies[@]}:"
+      msg_step "Checking if ${debiandependencies[package]} is installed"
+      dpkg -s ${debiandependencies[package]} >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "${debiandependencies[package]} was previously installed"
+      else
+      msg_warn "${debiandependencies[package]} is not installed. Installing it."
+      DEBIAN_FRONTEND=noninteractive apt install ${debiandependencies[package]} -yq --no-install-recommends >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        msg_success "${debiandependencies[package]} was successfully installed"
+      else
+        msg_err "Error installing ${debiandependencies[package]}. Please contact support@mageni.net and send us the $logfile"
+        exit 1
+      fi
+      fi
+  done
+  msg_success "${#debiandependencies[@]} dependencies installed successfully."
+  fi
+}
+
+function install_deb()
+{
+  msg_step "Installing Mageni Security Platform"
+
+  mkdir -p $dirdebi
+  if [ $? -eq 0 ]; then
+    # shellcheck disable=SC2164
+    cd $dirdebi
+    if [ $? -eq 0 ]; then
+      curl -k -O -L "$debsmburl" >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        dpkg -i $debsmbout >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+          msg_success "Mageni SMB installed successfully"
+          rm $debsmbout >/dev/null 2>/dev/null
+        else
+          msg_err "Error while installing $debsmbout"
+        fi
+      else
+        msg_err "Error while downloading $debsmbout"
+      fi
+
+      curl -k -O -L "$debliburl" >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        dpkg -i $deblibout >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+          msg_success "Mageni Libraries installed successfully"
+          rm $deblibout >/dev/null 2>/dev/null
+        else
+          msg_err "Error while installing $deblibout"
+        fi
+      else
+        msg_err "Error while downloading $deblibout"
+      fi
+
+      curl -k -O -L "$debscnurl" >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        dpkg -i $debscnout >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+          msg_success "Mageni Scanner installed successfully"
+          rm $debscnout >/dev/null 2>/dev/null
+        else
+          msg_err "Error while installing $debscnout"
+        fi
+      else
+        msg_err "Error while downloading $debscnout"
+      fi
+
+      curl -k -O -L "$debsqlurl" >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        dpkg -i $debsqlout >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+          msg_success "Mageni SQLite installed successfully"
+          rm $debsqlout >/dev/null 2>/dev/null
+        else
+          msg_err "Error while installing $debsqlout"
+        fi
+      else
+        msg_err "Error while downloading $debsqlout"
+      fi
+
+      curl -k -O -L "$debweburl" >/dev/null 2>/dev/null
+      if [ $? -eq 0 ]; then
+        dpkg -i $debwebout >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+          msg_success "Mageni Web Server installed successfully"
+          rm $debwebout >/dev/null 2>/dev/null
+        else
+          msg_err "Error while installing $debwebout"
+        fi
+      else
+        msg_err "Error while downloading $debwebout"
+      fi
+    fi
+  fi
+}
+
+function systemd_init()
+{
+  msg_step "Configuring systemd services"
+
+  if [ $distro == "kali" ] || [ $distro == "ubuntu" ]; then
+    if [ ! -f /lib/systemd/system/mageni-vscand.service ]; then
+      cp /usr/share/doc/mageni-vscand/doc/systemd/mageni-vscand.service /lib/systemd/system/mageni-vscand.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Scanner systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-vscand.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni Scanner systemd unit installed"
+        else
+            msg_err "Error while installing scanner systemd unit"
+        fi
+      fi
+    fi
+  elif [ $distro = "debian" ]; then
+    if [ ! -f /lib/systemd/system/mageni-vscand.service ]; then
+      cp /usr/doc/mageni-vscand/doc/systemd/mageni-vscand.service /lib/systemd/system/mageni-vscand.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Scanner systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-vscand.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni Scanner systemd unit installed"
+        else
+            msg_err "Error while installing scanner systemd unit"
+        fi
+      fi
+    fi
+  fi
+
+  if [ $distro == "kali" ] || [ $distro == "ubuntu" ]; then
+    if [ ! -f /lib/systemd/system/mageni-sqlite.service ]; then
+      cp /usr/share/doc/mageni-vscand/doc/systemd/mageni-sqlite.service /lib/systemd/system/mageni-sqlite.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Mageni SQLite systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-sqlite.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni SQLite systemd unit installed"
+        else
+            msg_err "Error while installing Mageni SQLite systemd unit"
+        fi
+      fi
+    fi
+    elif [ $distro = "debian" ]; then
+    if [ ! -f /lib/systemd/system/mageni-sqlite.service ]; then
+      cp /usr/doc/mageni-vscand/doc/systemd/mageni-sqlite.service /lib/systemd/system/mageni-sqlite.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Mageni SQLite systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-sqlite.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni SQLite systemd unit installed"
+        else
+            msg_err "Error while installing Mageni SQLite systemd unit"
+        fi
+      fi
+    fi
+  fi
+
+  if [ $distro == "kali" ] || [ $distro == "ubuntu" ]; then
+    if [ ! -f /lib/systemd/system/mageni-websvr.service ]; then
+      cp /usr/share/doc/mageni-vscand/doc/systemd/mageni-websvr.service /lib/systemd/system/mageni-websvr.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Web Server systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-websvr.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni Web Server systemd unit installed"
+        else
+            msg_err "Error while installing scanner systemd unit"
+        fi
+      fi
+    fi
+    elif [ $distro = "debian" ]; then
+    if [ ! -f /lib/systemd/system/mageni-websvr.service ]; then
+      cp /usr/doc/mageni-vscand/doc/systemd/mageni-websvr.service /lib/systemd/system/mageni-websvr.service >/dev/null 2>/dev/null;
+      if [ $? -ne 0 ]; then
+        msg_err "Error while installing Mageni Web Server systemd unit"
+      else
+        systemctl daemon-reload >/dev/null 2>/dev/null;
+        systemctl enable /lib/systemd/system/mageni-websvr.service >/dev/null 2>/dev/null;
+        if [ $? -eq 0 ]; then
+            msg_success "Mageni Web Server systemd unit installed"
+        else
+            msg_err "Error while installing Mageni Web Server systemd unit"
+        fi
+      fi
+    fi
+  fi
+}
+
+function configure_ldd()
+{
+  msg_step  "Configure dynamic linker run-time bindings"
+  ldconfig
+  if [ $? -eq 0 ]; then
+    msg_success "Dynamic linker run-time bindings success"
+  else
+    msg_err "Dynamic linker run-time bindings error."
+  fi
+}
+
+function configure_tls_certs()
+{
+  msg_step "Configuring TLS Certificates"
+
+  mageni-manage-certs -fa >/dev/null 2>/dev/null;
+  if [ $? -eq 0 ]; then
+    msg_success "TLS Certificates configured successfully."
+  else
+    msg_step "Error while configuring TLS Certificates"
+  fi
+}
+
+function configure_wmiexec()
+{
+  if [ $distro == "kali" ]; then
+    if [ -f /usr/share/doc/python3-impacket/examples/wmiexec.py ]; then
+      msg_step "Configuring Impacket wmiexec.py"
+      /usr/share/doc/python3-impacket/examples/wmiexec.py >/dev/null 2>/dev/null
+      if [ $? -ne 0 ]; then
+        cd /tmp >/dev/null 2>/dev/null
+        if [ $? -ne 0 ]; then
+          msg_err "Error while cd into /tmp"
+          else
+            git clone https://github.com/CoreSecurity/impacket.git >/dev/null 2>/dev/null
+          if [ $? -ne 0 ]; then
+              msg_err "Error while running git clone https://github.com/CoreSecurity/impacket.git"
+            else
+              cd impacket/ >/dev/null 2>/dev/null
+            if [ $? -ne 0 ]; then
+                msg_err "Error while cd into /tmp/impacket"
+              else
+                python3.7 setup.py install >/dev/null 2>/dev/null
+              if [ $? -eq 0 ]; then
+                ln -s /usr/local/bin/wmiexec.py /usr/bin/wmiexec.py >/dev/null 2>/dev/null
+                if [ $? -eq 0 ]; then
+                  msg_success "Impacket configuration successful."
+                  cd /tmp >/dev/null 2>/dev/null
+                  rm -rf impacket/ >/dev/null 2>/dev/null
+                fi
+              fi
+            fi
+          fi
+        fi
+        else
+        ln -s /usr/share/doc/python3-impacket/examples/wmiexec.py /usr/bin/wmiexec.py >/dev/null 2>/dev/null
+        if [ $? -eq 0 ]; then
+        msg_success "Impacket configuration successful"
+        fi
+      fi
+    elif [ $distro == "ubuntu" ] || [ $distro == "debian" ]; then
+      if [ -f /usr/share/doc/python-impacket/examples/wmiexec.py ]; then
+            msg_step "Configuring wmiexec"
+            ln -s /usr/share/doc/python-impacket/examples/wmiexec.py /usr/bin/wmiexec.py >/dev/null 2>/dev/null
+            if [ $? -eq 0 ]; then
+                msg_success "wmiexec configuration completed"
+            else
+                if [ $? = 127 ]; then
+                    msg_success "wmiexec configuration completed"
+                fi
+            fi
+      else
+        msg_step "wmiexec is not installed. Installing it."
+        DEBIAN_FRONTEND=noninteractive apt update -yq >/dev/null 2>/dev/null
+        DEBIAN_FRONTEND=noninteractive apt install python-impacket -yq --no-install-recommends >/dev/null 2>/dev/null
+        ln -s /usr/share/doc/python-impacket/examples/wmiexec.py /usr/bin/wmiexec.py >/dev/null 2>/dev/null
+      fi
+    fi
+  fi
+}
+
+function create_config_folder()
+{
+  if ! [ -f $licfile ]; then
+    msg_step "Bootstraping configuration directory."
+    msg_step "Generating license file."
+
+    touch $licfile
+    if [ $? -eq 0 ]; then
+        msg_success "License file created successfully!"
+        msg_success "Configuration directory bootstraped successfully!"
+    else
+        msg_err "Error while creating license file"
+    fi
+  fi
+}
+
+function token_register()
+{
+  create_config_folder
+  # msg_prompt "Enter the license and press [ENTER]:"
+  # read token
+
+  if [[ -n "$token" ]]; then
+    a=$(echo $token | tr -d "\n" | wc -c)
+    b=$(echo $token | tr -cd "[:alnum:]" | wc -c)
+
+    if [[ $a != $b ]]; then
+        echo "Please enter a valid license"
+        echo "Retry or Press Ctrl+C to exit"
+        token_register
+    else
+        msg_success "License format is valid"
+    fi
+  fi
+
+  grep -qi "$token" "$licfile"
+  if [ $? == 0 ]; then
+      msg_warn "License is already registered. Please get a new one from: $webhome"
+      exit 1
+  else
+    echo "$token" > "$licfile"
+    token=$(<$licfile)
+        msg_step "Contacting the server to register the license"
+    register=$(curl -s $webapi=$token | tr -d "\"")
+    if [ "$register" == "OK!" ]; then
+        msg_success "License registered successfully!"
+    else
+        msg_err "Error in the registration. Please contact support."
+    fi
+  fi
+}
+
+function clean_interrupt_install()
+{
+    msg_step_nolog "Cleaning files"
+    rm -rf $dirhome
+    if [ $? -eq 0 ]; then
+      msg_success_interrupt "Installation successfully interrupted and the files were removed"
+    else
+      msg_err_interrupt "Error while removing $dirhome. Please run: rm -rf $dirhome"
+    fi
+    msg_success_interrupt "Success cleaning files"
+}
+
+function successful_install()
+{
+  stmpins="$dirhome/stmpins"
+  stamp=$(curl -s https://dl.mageni.net/ubuntu/stamp)
+  echo "$stamp" > "$stmpins"
+  if [ $? -eq 0 ]; then
+    msg_success "Installation successful."
+    login_msg
+  else
+    msg_err "Error while installing version."
+  fi
+}
+
+function integrity_check()
+{
+  msg_step    "Validating integrity. Please wait."
+
+  pgpkey=$(script_integrity)
+  keypgp=$(curl -s https://dl.mageni.net/ubuntu/B33E72AC)
+  fingerprint=$(curl -s https://dl.mageni.net/ubuntu/fingerprint)
+
+  if [[ $pgpkey != $keypgp ]]; then
+    msg_err "Integrity check failed. Please verify that you downloaded the script from https://www.mageni.net"
+  else
+    msg_success "Integrity check successful. Fingerprint: $fingerprint"
+    msg_step    "Proceeding with the installation."
+  fi
+}
+
+function download_files()
+{
+  msg_step "Downloading feed"
+  curl -o /usr/local/var/lib/mageni/tmp/plugins.7z https://www.mageni.net/update?api_token=$token >/dev/null 2>/dev/null
+  if [ $? -eq 0 ]; then
+    msg_success "Feed downloaded"
+    msg_step  "Decompressing feed"
+    cd /usr/local/var/lib/mageni/tmp >/dev/null 2>/dev/null
+    if [ $? -eq 0 ]; then
+      7za x plugins.7z -y -bsp0 -bso0 >/dev/null 2>/dev/null &
+      if [ $? -eq 0 ]; then
+        msg_success "Feed decompression successful"
+      else
+        msg_err "Error while decompressing feed"
+      fi
+    else
+      msg_err "Error cd /usr/local/var/lib/mageni/tmp/Plugins/plugins"
+    fi
+  else
+    msg_err_interrupt "Error while downloading the feed"
+  fi
+
+  sleep 1
+  {
+      percentage="0"
+      while (true)
+      do
+          proc=$(ps aux | grep -v grep | grep -e "7za")
+          if [[ "$proc" == "" ]] && [[ "$percentage" -eq "0" ]];
+          then
+              break;
+          elif [[ "$proc" == "" ]] && [[ "$percentage" -gt "0" ]];
+          then
+              sleep 2
+              echo 98
+              sleep 1
+              echo 99
+              sleep 1
+              echo 100
+              sleep 1
+              break;
+          elif [[ "99" -eq "$percentage" ]]
+          then
+              percentage="90"
+          fi
+          sleep 1
+          echo $percentage
+          percentage=$(expr $percentage + 1)
+      done
+  } | whiptail --title "Database Sync" --gauge "Decompressing Database" 6 50 0
+}
+
+function feed()
+{
+  msg_step "Syncing folders"
+  cd /usr/local/var/lib/mageni/tmp/plugins >/dev/null 2>/dev/null
+  if [ $? -eq 0 ]; then
+    rsync -a --remove-source-files . /usr/local/var/lib/mageni/plugins/ >/dev/null 2>/dev/null
+    if [ $? -ne 0 ]; then
+      msg_err "Error while installing plugins"
+    fi
+  else
+    msg_err "Error while cd into tmp plugins"
+  fi
+
+  cd /usr/local/var/lib/mageni/tmp/cert >/dev/null 2>/dev/null
+  if [ $? -eq 0 ]; then
+    rsync -a --remove-source-files . /usr/local/var/lib/mageni/cert-data/ >/dev/null 2>/dev/null
+    if [ $? -ne 0 ]; then
+      msg_err "Error while installing CERT DB"
+    fi
+  else
+    msg_err "Error while cd into tmp cert"
+  fi
+
+  cd /usr/local/var/lib/mageni/tmp/scap >/dev/null 2>/dev/null
+  if [ $? -eq 0 ]; then
+    rsync -a --remove-source-files . /usr/local/var/lib/mageni/scap-data/ >/dev/null 2>/dev/null
+    if [ $? -ne 0 ]; then
+      msg_err "Error while installing SCAP DB"
+    fi
+  else
+    msg_err "Error while cd into tmp scap"
+  fi
+}
+
+function start_services()
+{
+  msg_step "Initiating Mageni Services"
+
+  /usr/local/sbin/scanner-start
+  if [ $? -eq 0 ]; then
+    msg_success "Mageni Scanner Initiated"
+  else
+    msg_err "Error while initiating Mageni Scanner"
+  fi
+
+  /usr/local/sbin/mageni-sqlite --listen=127.0.0.1 --port=9390 --client-watch-interval=0
+  if [ $? -eq 0 ]; then
+    msg_success "Mageni SQLite Initiated"
+  else
+    msg_err "Error while initiating Mageni SQLite"
+  fi
+
+  /usr/local/sbin/mageni-websvr --mlisten=127.0.0.1 --mport=9390 --http-sts --gnutls-priorities=SECURE128:SECURE192:-VERS-ALL:+VERS-TLS1.2
+  if [ $? -eq 0 ]; then
+    msg_success "Mageni Web Server Initiated"
+  else
+    msg_err "Error while initiating Mageni Web Server"
+  fi
+
+  sleep 1
+  {
+      percentage="0"
+      while (true)
+      do
+          proc=$(ps aux | egrep "(mageni-sqlite)" | grep "Reloading")
+          if [[ "$proc" == "" ]] && [[ "$percentage" -eq "0" ]];
+          then
+              break;
+          elif [[ "$proc" == "" ]] && [[ "$percentage" -gt "0" ]];
+          then
+              sleep 2
+              echo 98
+              sleep 1
+              echo 99
+              sleep 1
+              echo 100
+              sleep 1
+              break;
+          elif [[ "99" -eq "$percentage" ]]
+          then
+              percentage="90"
+          fi
+          sleep 1
+          echo $percentage
+          percentage=$(expr $percentage + 1)
+      done
+  } | whiptail --title "Feed Sync" --gauge "Updating Database" 6 50 0
+}
+
+function create_user_sqlite()
+{
+  msg_step "Creating user: $defaultuser"
+  /usr/local/sbin/mageni-sqlite --create-user=$defaultuser --role=$defaultrole --password=$defaultpass >/dev/null 2>/dev/null;
+  if [ $? -eq 0 ]; then
+      msg_success_log_scrub "User ${bold}$defaultuser${reset} created succesfully!"
+  else
+      msg_err "Error while creating user $defaultuser"
+  fi
+}
+
+function login_msg()
+{
+  echo -e ""
+  echo -e ">  ${bold}Web Interface:${reset} https://$IPAddress"
+  echo -e ">  ${bold}Username:${reset} $defaultuser"
+  echo -e ">  ${bold}Password:${reset} $defaultpass"
+  echo -e ">  ${bold}To change this password run:${reset} sudo mageni-sqlite --user=admin --new-password=NewPassword"
+  echo -e ""
+}
+
+function update_ports()
+{
+  msg_step "Updating IANA Service Name and Transport Protocol Port Number Registry"
+  if [ $distro == "ubuntu" ]; then
+    /usr/local/sbin/mageni-ports-update /usr/local/share/doc/mageni-scanner/redis_config/ports.xml >/dev/null 2>/dev/null;
+    if [ $? -eq 0 ]; then
+        msg_success "IANA Ports Number Registry Updated Succesfully"
+    else
+        msg_err "Error while updating ports"
+    fi
+  elif [ $distro = "debian" ]; then
+    /usr/local/sbin/mageni-ports-update /usr/doc/mageni-vscand/doc/systemd/ports.xml >/dev/null 2>/dev/null;
+    if [ $? -eq 0 ]; then
+        msg_success "IANA Ports Number Registry Updated Succesfully"
+    else
+        msg_err "Error while updating ports"
+    fi
+  elif [ $distro = "kali" ]; then
+    /usr/local/sbin/mageni-ports-update /usr/local/share/doc/mageni-scanner/redis_config/ports.xml >/dev/null 2>/dev/null;
+    if [ $? -eq 0 ]; then
+        msg_success "IANA Ports Number Registry Updated Succesfully"
+    else
+        msg_err "Error while updating ports"
+    fi
+  fi
+}
+
+function create_user_crond()
+{
+  msg_step  "Creating a system account "
+	egrep "^$cronduser" /etc/passwd >/dev/null 2>/dev/null;
+	if [ $? -eq 0 ]; then
+		msg_err "$cronduser exists!"
+	else
+    useradd -r -g sudo $cronduser >/dev/null 2>/dev/null;
+		if [ $? -eq 0 ]; then
+      msg_success "System account $cronduser created"
+    else
+      msg_err "Creation of system account $cronduser failed"
+    fi
+  fi
+}
+
+function restart_cron()
+{
+  msg_step  "Restarting cron"
+	/etc/init.d/cron restart >/dev/null 2>/dev/null;
+	if [ $? -eq 0 ]; then
+    msg_success "Cron restarted succesfully!"
+  else
+    msg_err "Error while restarting cron"
+  fi
+}
+
+function no_ctrlc()
+{
+  msg_prompt_interrupt "Do you want to cancel the installation? (yes/no) [Default=no] "
+  read RESP
+  if [ "$RESP" = "yes" ]; then
+    msg_warn "Interrupting installation"
+    clean_interrupt_install
+  else
+    msg_step "Restarting installation."
+  fi
+}
+
+function start_install()
+{
+  msg_welcome
+  trap_signals
+  check_perms
+  bootstrap_dir_home
+  start_log_file
+  agreement
+  install_curl
+  integrity_check
+  disk_check
+  essential_software
+  get_ip
+  selinux_check
+  test_internet
+  check_port_https
+  check_port_manager
+  discover_hostname
+  discover_os
+}
+  trap no_ctrlc 2
+  start_install
+  token_register
+  apt_install_dependencies
+  configure_wmiexec
+  install_deb
+  # systemd_init
+  configure_ldd
+  configure_tls_certs
+  download_files
+  feed
+  start_services
+  create_user_sqlite
+  update_ports
+  create_user_crond
+  # restart_cron
+  trap successful_install EXIT
