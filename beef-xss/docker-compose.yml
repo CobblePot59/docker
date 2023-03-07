@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      args:
+        password: "beef-xss"
+    image: beef-xss
+    container_name: beef-xss
+    restart: always
+    ports:
+      - "3000:3000"
