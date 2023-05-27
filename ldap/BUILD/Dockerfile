@@ -12,8 +12,7 @@ RUN DEP_PKG="python3 python3-dev python3-cryptography python3-pyasn1 \
              libjansson-dev libfam-dev libarchive-dev liblmdb-dev \
              libacl1-dev libldap2-dev libpam-dev libdbus-1-dev" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends $DEP_PKG && \
-    apt-get clean
+    apt-get install -y --no-install-recommends $DEP_PKG
 
 # Install
 RUN wget https://download.samba.org/pub/samba/stable/samba-$SAMBA_VERSION.tar.gz && \
@@ -28,7 +27,7 @@ ENV PATH=/usr/local/samba/bin:/usr/local/samba/sbin:$PATH
 COPY --chmod=700 BUILD/docker-entrypoint.sh /docker-entrypoint.sh
 
 # Clean
-RUN apt autoremove && apt clean && apt autoclean && \
+RUN apt-get autoremove && apt-get clean && apt-get autoclean && \
     rm -r samba-$SAMBA_VERSION.tar.gz samba-$SAMBA_VERSION
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
