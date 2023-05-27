@@ -11,8 +11,9 @@ RUN DEP_PKG="python3 python3-dev python3-cryptography python3-pyasn1 \
              libgnutls28-dev libgpgme-dev libparse-yapp-perl \
              libjansson-dev libfam-dev libarchive-dev liblmdb-dev \
              libacl1-dev libldap2-dev libpam-dev libdbus-1-dev" && \
-    apt update && \
-    apt install -y $DEP_PKG
+    apt-get update && \
+    apt-get install -y --no-install-recommends $DEP_PKG && \
+    apt-get clean
 
 # Install
 RUN wget https://download.samba.org/pub/samba/stable/samba-$SAMBA_VERSION.tar.gz && \
